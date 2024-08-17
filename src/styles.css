@@ -1,0 +1,67 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://media.istockphoto.com/id/857045822/vector/seamless-question-mark-background.jpg?s=612x612&w=0&k=20&c=ZnLPDOCb6Cbbigju-STZ6iCZnyjtZLkEj5bHhXRIumI=') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+  }
+  
+  .container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #ffda79;
+  }
+  
+  .options button {
+    display: block;
+    background-color: #ff6363;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .options button:hover {
+    background-color: #ff9f9f;
+  }
+  
+  .result p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  button {
+    background-color: #79ffda;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #b3ffe2;
+  }
+  
