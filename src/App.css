@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .app {
   text-align: center;
   margin: 0 auto;
@@ -54,4 +55,28 @@ button {
 
 button:hover {
   background-color: #1e88e5;
+=======
+.App {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.question-container {
+  margin-top: 20px;
+}
+
+.options {
+  margin: 10px 0;
+}
+
+.options div {
+  margin: 5px 0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+>>>>>>> ca64d1c6b501d87c315a6d77d5bfe98ff55ff8a5
 }
