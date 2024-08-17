@@ -1,23 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
 import "./styles.css"; // Import the CSS file
-
-function App() {
-  return (
-    <Router>
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Quiz />} />
-          <Route path="/result" element={<Result />} />
-        </Routes>
-      </div>
-    </Router>
-=======
-import React, { useState } from 'react';
-import './App.css';
 
 const questions = [
   {
@@ -60,38 +45,44 @@ function App() {
   };
 
   return (
-    <div className="App">
-      {!showResults ? (
-        <div>
-          <h1>Quiz App</h1>
-          <div className="question-container">
-            <p>{questions[currentQuestion].question}</p>
-            <div className="options">
-              {questions[currentQuestion].options.map((option) => (
-                <div key={option}>
-                  <input
-                    type="radio"
-                    id={option}
-                    name="option"
-                    value={option}
-                    checked={selectedOption === option}
-                    onChange={handleOptionChange}
-                  />
-                  <label htmlFor={option}>{option}</label>
+    <Router>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={
+            !showResults ? (
+              <div className="App">
+                <h1>Quiz App</h1>
+                <div className="question-container">
+                  <p>{questions[currentQuestion].question}</p>
+                  <div className="options">
+                    {questions[currentQuestion].options.map((option) => (
+                      <div key={option}>
+                        <input
+                          type="radio"
+                          id={option}
+                          name="option"
+                          value={option}
+                          checked={selectedOption === option}
+                          onChange={handleOptionChange}
+                        />
+                        <label htmlFor={option}>{option}</label>
+                      </div>
+                    ))}
+                  </div>
+                  <button onClick={handleSubmit}>Next</button>
                 </div>
-              ))}
-            </div>
-            <button onClick={handleSubmit}>Next</button>
-          </div>
-        </div>
-      ) : (
-        <div>
-          <h1>Quiz Results</h1>
-          <p>Your score: {score}/{questions.length}</p>
-        </div>
-      )}
-    </div>
->>>>>>> ca64d1c6b501d87c315a6d77d5bfe98ff55ff8a5
+              </div>
+            ) : (
+              <div>
+                <h1>Quiz Results</h1>
+                <p>Your score: {score}/{questions.length}</p>
+              </div>
+            )
+          } />
+          <Route path="/result" element={<Result />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
